@@ -5,6 +5,6 @@ def convert(n):
 
     while n > 0:
         binary = str(n % 2) + binary
-        n = n // 2 # quotient for current iteration but will become divident for next iteration
+        n = n // 2 # quotient for current iteration but will become dividend for next iteration
     
     return binary
