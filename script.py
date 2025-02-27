@@ -1,10 +1,34 @@
-import decimalToBinary
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
+    @abstractmethod
+    def engine(self):
+        pass
+    
+    @abstractmethod
+    def wheels(self):
+        pass
 
-def main():
-    # Wassup shorty start coding from here
-    while True:
-        n = int(input("Enter number: "))
-        print(decimalToBinary.convert(n))
+class Car(Vehicle):
+    def engine(self):
+        return 'car engine'
+    
+    def wheels(self):
+        return 4
 
-if __name__ == '__main__':
-    main()
+class Bike(Vehicle):
+    def engine(self):
+        return 'bike engine'
+    
+    def wheels(self):
+        return 2
+
+class Truck(Vehicle):
+    def engine(self):
+        return 'truck engine'
+    
+    def wheels(self):
+        return 18
+
+c = Car()
+print(c.engine())
+print(c.wheels())
