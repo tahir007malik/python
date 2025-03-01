@@ -1,26 +1,20 @@
-def main():
-    # start coding from here ...
-    def isPrime(num):
-        if num <= 1:
-            return False
-        for i in range(2, int(num ** 0.5) + 1):
-            if num % i == 0:
-                return False
-        return True
+class Rectangle:
+    def draw(self):
+        print('drawing a rectangle')
+    
+    def get_area(self, length, breadth):
+        return length * breadth
 
-    def findPrimeFactors(n):
-        factorsList = []
-        primeFactorsList = []
-        for i in range(1, n + 1):
-            if n % i == 0:
-                factorsList.append(i)
-                if isPrime(i):
-                    primeFactorsList.append(i)
-        return factorsList, primeFactorsList
+class Circle:
+    def draw(self):
+        print('drawing a circle')
+    
+    def get_area(self, radius):
+        return 3.14159 * radius * radius
 
-    n = int(input('enter n: '))
-    factors, primeFactors = findPrimeFactors(n)
-    print('factors:', factors)
-    print('prime factors:', primeFactors)
-if __name__ == '__main__':
-    main()
+class Triangle:
+    def draw(self):
+        print('drawing a triangle')
+
+t = Triangle()
+t.draw()
